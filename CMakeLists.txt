@@ -19,6 +19,13 @@ add_executable(pose_estimation_3d2d
         include/pose_estimation_3d2d.h
         include/common_functions.h)
 
+add_executable(pose_estimation_3d3d
+        pose_estimation_3d3d.cpp
+        include/pose_estimation_3d3d.h
+        include/common_functions.h)
+
 target_link_libraries(pose_estimation ${OpenCV_LIBS})
 
 target_link_libraries(pose_estimation_3d2d ${OpenCV_LIBS} g2o_core g2o_stuff fmt glog)
+
+target_link_libraries(pose_estimation_3d3d ${OpenCV_LIBS} g2o_core g2o_stuff fmt glog)
